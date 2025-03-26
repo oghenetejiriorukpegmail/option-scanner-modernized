@@ -1,0 +1,26 @@
+{
+  "name": "option-scanner-modernized",
+  "version": "0.2.0",
+  "description": "A modernized options trading analysis tool for retail traders",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "start:client": "cd client && npm start",
+    "start:server": "cd server && npm start",
+    "prestart:client": "set PORT=3000",
+    "prestart:server": "set PORT=3002",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "test": "concurrently \"npm run test:client\" \"npm run test:server\"",
+    "test:client": "cd client && npm test",
+    "test:server": "cd server && npm test",
+    "build": "concurrently \"npm run build:client\" \"npm run build:server\"",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build"
+  },
+  "keywords": ["options", "trading", "analysis", "finance", "responsive", "modern"],
+  "author": "Oghenetejiri Orukpe",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
